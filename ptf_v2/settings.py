@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'Projects.apps.ProjectsConfig',
+    
+    #Default Apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,8 +79,12 @@ WSGI_APPLICATION = 'ptf_v2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ptf34_v2',
+        'USER': 'ptf34',
+        'PASSWORD': 'genkidama',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
 
@@ -119,3 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, '/media')
+MEDIA_URL = '/media/'
