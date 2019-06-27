@@ -1,0 +1,35 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+
+    <main role="main">
+        <div class="container">
+            <h1 class="text-center pt-3">Project Details</h1>
+            <br/>
+            <br/>
+            <h2>{{ projectdetails.title }}</h2>
+            <a href="{{ projectdetails.link }}">{{ projectdetails.title_link }}</a>
+            <br>
+            <a href="{{ projectdetails.video }}">{{ projectdetails.title_video }}</a>
+            <hr/>
+            <center><img class="img-fluid" alt="Responsive image" src="{{ projectdetails.image.url }}" maxwidth="500"
+                         height="200">
+                <br>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src={{ projectdetails.video }} frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+                <hr/>
+            </center>
+            <br>
+            <img class="img-fluid" alt="Responsive image" src="{{ projectdetails.image_details.url }}">
+            <br/>
+            <br>
+            {{ projectdetails.summary }}
+            <hr/>
+
+        </div>
+    </main>
+
+{% endblock %}

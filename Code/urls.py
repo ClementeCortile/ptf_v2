@@ -1,0 +1,10 @@
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.allCode, name='allcode'),
+    path('<int:code_id>/', views.detailcode, name='detailcode'),
+    path('note1', views.musicchallange, name='musicchallange')
+
+]

@@ -1,0 +1,26 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+    <main role="main">
+        <div class="container">
+            <h1 class="text-center pt-3">Code and Notebooks</h1>
+            <br/>
+            <br/>
+            <h2>Latest Notebooks</h2>
+            <hr/>
+            {% for code in code.all %}
+                <a href='{% url 'detailcode' code.id %}'><h4>{{ code.title }}</h4></a>
+                <img src="{{ code.image.url }}"> <br>
+                {{ code.summary }}
+                <br/>
+                <hr/>
+            {% endfor %}
+
+        </div>
+    </main>
+
+
+{% endblock %}

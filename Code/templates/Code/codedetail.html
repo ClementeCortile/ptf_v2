@@ -1,0 +1,25 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+
+    {% load staticfiles %}
+
+    <main role="main">
+        <div class="container">
+            <center><img src="{{ codedetail.image.url }}"/></center>
+            <h1 class="text-center pt-3">{{ codedetail.title }}</h1>
+            <br/>
+            {{ codedetail.body }}
+            <br/>
+            <hr/>
+            <iframe src="{{ codedetail.link }}" height="1000" width="1200" id="inlineFrameExample"
+                    title="Inline Frame Example" allow="fullscreen"></iframe>
+            <br>
+            <br/>
+            <hr/>
+
+        </div>
+    </main>
+
+
+{% endblock %}
