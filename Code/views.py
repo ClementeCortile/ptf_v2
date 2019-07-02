@@ -17,3 +17,11 @@ def musicchallange(request):
     return render(request, 'Code/Notebooks/MusicChallange.html')
 
 
+def codechallange(request):
+    return render(request, 'Code/Notebooks/Data_Challange.html')
+
+
+def galileo(request):
+    return render(request, 'Code/Notebooks/Galileo_Data.html')
+
+
